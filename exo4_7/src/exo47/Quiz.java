@@ -19,20 +19,21 @@ public class Quiz {
 		int i;
 		Scanner sc;
 		for(i=0;i<10;i++){
-			System.out.print("question N°"+ (i+1) + ": "+ oper1[i]+ " + " + oper2[i]+ " = ?");
+			System.out.print("question NÂ°"+ (i+1) + ": "+ oper1[i]+ " + " + oper2[i]+ " = ?");
 			sc = new Scanner(System.in);
 		    resultat[i] = sc.nextInt();
 		}
 	}
 	public static void evaluerQuiz(){
+		int score=0;
 		int i;
-		System.out.println("les bonnes réponses sont:");
+		System.out.println("les bonnes rÃ©ponses sont:");
 		for(i=0;i<10;i++){
 		    if(resultat[i]==(oper1[i]+oper2[i])){
-		    	System.out.println("question N°"+ (i+1) + ": "+ oper1[i]+ " + " + oper2[i]+ " = "+(oper1[i]+oper2[i])+". Votre réponse est correcte.");
+		    	System.out.println("question NÂ°"+ (i+1) + ": "+ oper1[i]+ " + " + oper2[i]+ " = "+(oper1[i]+oper2[i])+". Votre rÃ©ponse est correcte.");
 			score+=10;		    
 		}else{
-		    	System.out.println("question N°"+ (i+1) + ": "+ oper1[i]+ " + " + oper2[i]+ " = "+(oper1[i]+oper2[i])+". Vous avez trouvez "+resultat[i]+", votre réponse n'est pas correcte.");
+		    	System.out.println("question NÂ°"+ (i+1) + ": "+ oper1[i]+ " + " + oper2[i]+ " = "+(oper1[i]+oper2[i])+". Vous avez trouvez "+resultat[i]+", votre rÃ©ponse n'est pas correcte.");
 		    }
 		}
 		System.out.println("votre score est de "+score+" points");
