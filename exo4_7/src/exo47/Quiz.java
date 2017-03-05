@@ -2,11 +2,19 @@ package exo47;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * 
+ * @author KATIA
+ *
+ */
 public class Quiz {
 	public static int oper1[]=new int[10];
 	public static int oper2[]=new int[10];
 	public static int resultat[]=new int[10];
 	
+	/**
+	 * this function creates the quiz by generating the two numbers
+	 */
 	public static void creerQuestionnaire(){
 		int i;
 		Random rand = new Random();
@@ -15,6 +23,10 @@ public class Quiz {
 			oper2[i]=rand.nextInt(51);
 		}
 	}
+	
+	/**
+	 * this function administers the quiz by asking the question to the user
+	 */
 	public static void administrerQuiz(){
 		int i;
 		Scanner sc;
@@ -24,6 +36,10 @@ public class Quiz {
 		    resultat[i] = sc.nextInt();
 		}
 	}
+	
+	/**
+	 * this function grades the quiz 
+	 */
 	public static void evaluerQuiz(){
 		int score=0;
 		int i;
